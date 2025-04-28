@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Plantee - Plant E-commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern e-commerce website for plants with MongoDB integration for product listings, cart functionality, checkout process, and a live plant assistant chatbot powered by Google's Gemini 2.0 Flash AI.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Product browsing with category filtering
+- Shopping cart functionality
+- Secure checkout process
+- Contact form
+- Plant assistant chatbot with AI responses
+- MongoDB database integration
+- Dark/light theme toggle
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js
+- MongoDB
+- Google Gemini API key
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the backend server (in a separate terminal):
+   ```bash
+   npm run start-backend
+   ```
+4. Start the frontend development server:
+   ```bash
+   npm start
+   ```
 
-### `npm run build`
+## Database Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application uses MongoDB to store:
+- Plants data
+- Order information
+- Contact form submissions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure your MongoDB connection string is properly set in the `.env` file:
+```
+MONGO_URI=your_mongodb_connection_string
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Chatbot Configuration
 
-### `npm run eject`
+The plant assistant chatbot uses Google's Gemini 2.0 Flash AI. Make sure your API key is configured in the root `.env` file:
+```
+REACT_APP_GOOGLE_API_KEY=your_google_api_key
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Database Collections
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `plants` - Stores all plant data
+- `orders` - Stores order information and status
+- `contacts` - Stores contact form submissions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Folder Structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `/src` - Frontend React application
+- `/backend` - Backend Express server and MongoDB integration
+- `/public` - Static assets
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- TypeScript
+- MongoDB
+- Express.js
+- Google Gemini AI
+- Node.js
